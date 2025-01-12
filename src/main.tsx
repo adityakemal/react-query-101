@@ -6,13 +6,14 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const defaultOptions = {
+const defaultOptions: any = {
   queries: {
     refetchOnWindowFocus: false, // canggih bro
-    onError: (error: any) => {
+    throwOnError: (error: any) => {
       // Handle the error globally
-      console.error("An error occurred:", error);
+      console.error("An error occurred:", error.message);
     },
+    // networkMode: "of",
   },
 };
 
